@@ -1,0 +1,5 @@
+@EndUserText.label: 'Service definition HEADER793'
+define service ZSD_HEADER793 {
+  expose Z_C_HEADER793;
+  expose Z_C_DETAIL793;
+}

@@ -1,0 +1,32 @@
+managed; //implementation in class zbp_i_header793 unique;
+//strict ( 1 ); //Uncomment this line in order to enable strict mode 2. The strict mode has two variants (strict(1), strict(2)) and is prerequisite to be future proof regarding syntax and to be able to release your BO.
+
+define behavior for Z_I_HEADER793 alias Header
+implementation in class zcl_i_header793 unique
+persistent table zheader_793
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  field ( mandatory ) Id, email;
+  field ( features : instance ) Id;
+  create;
+  update;
+  delete;
+  association _Detail { create; }
+  mapping for zheader_793 corresponding;
+}
+
+define behavior for Z_I_DETAIL793 alias Detail
+implementation in class zcl_i_items793 unique
+persistent table zdetail_793
+lock dependent by _Header
+authorization dependent by _Header
+//etag master <field_name>
+{
+  update;
+  delete;
+  field ( readonly ) Id;
+  association _Header;
+  mapping for zdetail_793 corresponding;
+}

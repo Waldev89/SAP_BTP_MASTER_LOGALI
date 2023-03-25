@@ -1,0 +1,76 @@
+@Metadata.layer: #CORE
+@Search.searchable: true
+@UI:{
+    headerInfo: {
+    typeName: 'Header',
+    typeNamePlural: 'Headers',
+    title: {
+        type: #STANDARD,
+        value: 'Id'
+    }
+}}
+annotate view Z_C_HEADER793 with
+{
+  @UI.facet: [{id: 'Header',
+               purpose: #STANDARD,
+               type: #IDENTIFICATION_REFERENCE,
+               label: 'Header',
+               position: 10 },
+               { id: 'Items',
+                 purpose: #STANDARD,
+                 type: #LINEITEM_REFERENCE,
+                 label: 'Items',
+                 position: 20,
+                 targetElement: '_Detail'
+               }]
+ 
+  @UI: {
+  lineItem: [{
+     position: 10,
+     importance: #HIGH}],
+  identification: [{ position: 10, label: 'Header  ID [1,...,99999999]' }]
+  }
+  @Search.defaultSearchElement: true
+  Id;
+
+  @UI: {
+  lineItem: [ { position: 20, importance: #HIGH } ],
+  identification: [ { position: 20, label: 'Email' } ]
+  }
+  Email;
+
+  @UI: {
+  lineItem: [ { position: 30, importance: #HIGH } ],
+  identification: [ { position: 30, label: 'Firstname' } ] }
+  Firstname;
+
+  @UI: {
+  lineItem: [ { position: 40, importance: #HIGH } ],  
+  identification:[ { position: 40, label: 'Lastname' } ] }
+  Lastname;
+
+  @UI: {
+  lineItem: [ { position: 50, importance: #HIGH } ],  
+  identification:[ { position: 50, label: 'Country' } ] }
+  Country;
+
+  @UI: {
+  lineItem: [ { position: 60, importance: #MEDIUM } ],
+  identification: [ { position: 60, label: 'Createon' } ] }
+  Crateon;
+
+  @UI: {
+  lineItem: [ { position: 70, importance: #MEDIUM } ],
+  identification: [ { position: 70, label: 'Deliverydate' } ] }
+  Deliverydate;
+
+  @UI: {
+  lineItem: [ { position: 80, importance: #HIGH } ],  
+  identification: [ { position: 80, label: 'Status' } ] }
+  Orderstatus;
+
+  @UI: {
+  lineItem: [ { position: 90, importance: #MEDIUM } ],    
+  identification: [ { position: 90, label: 'Imageurl' } ] }
+  Imageurl;
+}

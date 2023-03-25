@@ -1,0 +1,79 @@
+@Metadata.layer: #CORE
+@Search.searchable: true
+@UI:{
+    headerInfo: {
+    typeName: 'Item Sale order',
+    typeNamePlural: 'Items Sales orders',
+    title: {
+        type: #STANDARD,
+        label: 'Items Sales Orders',
+        value: 'Id'
+    }
+}}
+annotate view Z_C_DETAIL793 with
+{
+  @UI.facet: [{
+  id: 'ItemsID',
+  purpose: #STANDARD,
+  type: #IDENTIFICATION_REFERENCE,
+  label: 'Item Sale Order',
+  position: 10 }]
+  @Search.defaultSearchElement: true
+  Id;
+
+  @UI: {
+  lineItem: [ { position: 20, importance: #HIGH } ],
+  identification: [ { position: 20, label: 'Nombre' } ] }
+  @Search.defaultSearchElement: true
+  Name;
+ 
+  @UI: {
+  lineItem: [ { position: 30, importance: #HIGH } ],
+  identification: [ { position: 30, label: 'Description' } ] }
+  @Search.defaultSearchElement: true 
+  Description;
+  
+  @UI: { 
+  lineItem: [ { position: 40, importance: #MEDIUM } ],
+  identification: [ { position: 40, label: 'Releasedate' } ] }
+  Releasedate;
+  
+  @UI: 
+  { lineItem: [ { position: 50, importance: #MEDIUM } ],
+  identification: [ { position: 50, label: 'Discontinueddate' } ] }
+  Discontinuedate;
+  
+  @UI: 
+  { lineItem: [ { position: 60, importance: #HIGH } ],
+  identification: [ { position: 60, label: 'Total Price' } ] }
+  @Consumption.valueHelpDefinition: [{entity: {name: 'I_Currency', element: 'Currency' }}]
+   Price;
+    
+  @UI: 
+  { lineItem: [ { position: 70, importance: #HIGH } ],
+  identification: [ { position: 70, label: 'Height' } ] }
+  Height;
+  
+  @UI: 
+  { lineItem: [ { position: 80, importance: #HIGH } ],
+  identification: [ { position: 80, label: 'Width' } ] }
+  Width;
+  
+  @UI: 
+  { lineItem: [ { position: 90, importance: #HIGH } ],
+  identification: [ { position: 90, label: 'Depth' } ] }
+  Depth;
+  
+  @UI: 
+  { lineItem: [ { position: 100, importance: #HIGH } ],
+  identification: [ { position: 100, label: 'Quantity' } ] }
+  Quantity;
+  
+  @UI: 
+  { lineItem: [ { position: 110, importance: #HIGH } ],
+  identification: [ { position: 110, label: 'Unitofmeasure' } ] }  
+  @Consumption.valueHelpDefinition: [{ entity :
+  {name: 'I_UnitOfMeasure', element: 'UnitOfMeasure' } }]
+  @Search.defaultSearchElement: true
+  Unitofmeasure;
+}
