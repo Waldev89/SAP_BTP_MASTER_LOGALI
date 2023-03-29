@@ -1,5 +1,5 @@
 @Metadata.layer: #CORE
-@Search.searchable: true
+@Search.searchable: false
 @UI:{
     headerInfo: {
     typeName: 'Header',
@@ -14,12 +14,12 @@ annotate view Z_C_HEADER793 with
   @UI.facet: [{id: 'Header',
                purpose: #STANDARD,
                type: #IDENTIFICATION_REFERENCE,
-               label: 'Header',
+               label: '{@i18n>Header}',
                position: 10 },
                { id: 'Items',
                  purpose: #STANDARD,
                  type: #LINEITEM_REFERENCE,
-                 label: 'Items',
+                 label: '{@i18n>Items}',
                  position: 20,
                  targetElement: '_Detail'
                }]
@@ -28,49 +28,49 @@ annotate view Z_C_HEADER793 with
   lineItem: [{
      position: 10,
      importance: #HIGH}],
-  identification: [{ position: 10, label: 'Header  ID [1,...,99999999]' }]
+  identification: [{ position: 10, label: '{@i18n>Id1}' }]
   }
-  @Search.defaultSearchElement: true
+  @Search.defaultSearchElement: false
   Id;
 
   @UI: {
   lineItem: [ { position: 20, importance: #HIGH } ],
-  identification: [ { position: 20, label: 'Email' } ]
+  identification: [ { position: 20, label: '{@i18n>Email}' } ]
   }
   Email;
 
   @UI: {
   lineItem: [ { position: 30, importance: #HIGH } ],
-  identification: [ { position: 30, label: 'Firstname' } ] }
+  identification: [ { position: 30, label: '{@i18n>Fname}' } ] }
   Firstname;
 
   @UI: {
   lineItem: [ { position: 40, importance: #HIGH } ],  
-  identification:[ { position: 40, label: 'Lastname' } ] }
+  identification:[ { position: 40, label: '{@i18n>Lname}' } ] }
   Lastname;
 
   @UI: {
   lineItem: [ { position: 50, importance: #HIGH } ],  
-  identification:[ { position: 50, label: 'Country' } ] }
+  identification:[ { position: 50, label: '{@i18n>Country}' } ] }
   Country;
 
   @UI: {
   lineItem: [ { position: 60, importance: #MEDIUM } ],
-  identification: [ { position: 60, label: 'Createon' } ] }
+  identification: [ { position: 60, label: '{@i18n>Crateon}' } ] }
   Crateon;
 
   @UI: {
   lineItem: [ { position: 70, importance: #MEDIUM } ],
-  identification: [ { position: 70, label: 'Deliverydate' } ] }
+  identification: [ { position: 70, label: '{@i18n>Deliverydate}' } ] }
   Deliverydate;
 
   @UI: {
   lineItem: [ { position: 80, importance: #HIGH } ],  
-  identification: [ { position: 80, label: 'Status' } ] }
+  identification: [ { position: 80, label: '{@i18n>Orderstatus}' } ] }
   Orderstatus;
 
   @UI: {
   lineItem: [ { position: 90, importance: #MEDIUM } ],    
-  identification: [ { position: 90, label: 'Imageurl' } ] }
+  identification: [ { position: 90, label: '{@i18n>Imageurl}' } ] }
   Imageurl;
 }

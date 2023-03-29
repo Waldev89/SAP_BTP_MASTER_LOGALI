@@ -16,62 +16,62 @@ annotate view Z_C_DETAIL793 with
   id: 'ItemsID',
   purpose: #STANDARD,
   type: #IDENTIFICATION_REFERENCE,
-  label: 'Item Sale Order',
+  label: '{@i18n>Itemsale}', // Item Sale Order
   position: 10 }]
   @Search.defaultSearchElement: true
   Id;
 
   @UI: {
   lineItem: [ { position: 20, importance: #HIGH } ],
-  identification: [ { position: 20, label: 'Nombre' } ] }
+  identification: [ { position: 20, label: '{@i18n>Name}' } ] }
   @Search.defaultSearchElement: true
   Name;
  
   @UI: {
   lineItem: [ { position: 30, importance: #HIGH } ],
-  identification: [ { position: 30, label: 'Description' } ] }
+  identification: [ { position: 30, label: '{@i18n>Desc}' } ] }
   @Search.defaultSearchElement: true 
   Description;
   
   @UI: { 
   lineItem: [ { position: 40, importance: #MEDIUM } ],
-  identification: [ { position: 40, label: 'Releasedate' } ] }
+  identification: [ { position: 40, label: '{@i18n>Release}' } ] }
   Releasedate;
   
   @UI: 
   { lineItem: [ { position: 50, importance: #MEDIUM } ],
-  identification: [ { position: 50, label: 'Discontinueddate' } ] }
+  identification: [ { position: 50, label: '{@i18n>Discont}' } ] }
   Discontinuedate;
   
   @UI: 
   { lineItem: [ { position: 60, importance: #HIGH } ],
-  identification: [ { position: 60, label: 'Total Price' } ] }
+  identification: [ { position: 60, label: '{@i18n>Price}' } ] }
   @Consumption.valueHelpDefinition: [{entity: {name: 'I_Currency', element: 'Currency' }}]
    Price;
     
   @UI: 
   { lineItem: [ { position: 70, importance: #HIGH } ],
-  identification: [ { position: 70, label: 'Height' } ] }
+  identification: [ { position: 70, label: '{@i18n>Height}' } ] }
   Height;
   
   @UI: 
   { lineItem: [ { position: 80, importance: #HIGH } ],
-  identification: [ { position: 80, label: 'Width' } ] }
+  identification: [ { position: 80, label: '{@i18n>Width}' } ] }
   Width;
   
   @UI: 
   { lineItem: [ { position: 90, importance: #HIGH } ],
-  identification: [ { position: 90, label: 'Depth' } ] }
+  identification: [ { position: 90, label: '{@i18n>Depth}' } ] }
   Depth;
   
   @UI: 
   { lineItem: [ { position: 100, importance: #HIGH } ],
-  identification: [ { position: 100, label: 'Quantity' } ] }
+  identification: [ { position: 100, label: '{@i18n>Quantity}' } ] }
   Quantity;
   
   @UI: 
   { lineItem: [ { position: 110, importance: #HIGH } ],
-  identification: [ { position: 110, label: 'Unitofmeasure' } ] }  
+  identification: [ { position: 110, label: '{@i18n>UM}' } ] }  
   @Consumption.valueHelpDefinition: [{ entity :
   {name: 'I_UnitOfMeasure', element: 'UnitOfMeasure' } }]
   @Search.defaultSearchElement: true
